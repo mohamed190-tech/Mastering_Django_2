@@ -13,7 +13,10 @@ app_name = "blog"
 urlpatterns = [
     #path('', views.post_list,name='post_lis'),
     path('', views.PostListView.as_view(),name='post_lis'),
-    path('<int:year>/<int:month>/<int:day>/<slug:post>/',views.post_detal,name='post_detal'),
+    path('<int:year>/<int:month>/<int:day>/<slug:posts>/',views.post_detail,name='post_detail'),
+   # path('<int:id>/',views.post_detail,name='post_detail')
+    #path('<int:yearid>/<int:month>/<int:day>/<slug:post>/',views.post_detail,name='post_detail'),
+    path('<int:post_id>/share/',views.post_share,name='post_share'),
    
 ]
 
